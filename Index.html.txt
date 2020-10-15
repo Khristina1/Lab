@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="uk">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Fish Store</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+        <link rel="stylesheet" href="css/index.css">
+        <link rel="icon" type="image.png" href="image/favicon.ico">
+         <script type = "js/index.js" src = " linkedselect.js "> </script>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <a href="index.html" class="text">
+                    <img src="image/favicon.jpg" alt="fish" width="40" height="40">Fish store
+
+                </a>
+                 <div class="clock"></div>
+                <ul class="menu">
+                    <li>
+                        <a class="main" href="index.html">Головна</a>
+                    </li>
+                    <li>
+                        <a class="catalog" href="#catalog">Каталог</a>
+                    </li>
+                    <li>
+                        <a  class="contacts" href="#contacts">Контакти</a>
+                    </li>
+                    <label class="search" >
+                        <input class="animated bounceIn slow duration:5s" type="text" class="search" name="search">Пошук
+                    </label>
+                </ul>
+            </nav>
+            <div class="banner">
+                <h1>
+                    <a href="index.html">Welcome to Fish store</a>
+                </h1>
+            </div>
+        </header>
+        <main>
+            <section id="catalog">
+                <h1 class="catalogies">
+                    Каталог<img src="image/basket.png" alt="basket" width="50" height="35">
+                </h1>
+                <div class="catagories">
+                    <ul class="catagory">
+                        <h2>Категорії:</h2>
+                        <li>
+                            <a href="index.html">Рекомендовані</a>
+                        </li>
+                        <li>
+                            <a href="karp.html">Карпи</a>
+                        </li>
+                        <li>
+                            <a href="haratsunovi.html">Харацинові</a>
+                        </li>
+                        <li>
+                            <a href="som.html">Соми</a>
+                        </li>
+                        <li>
+                            <a href="#">Скалярії</a>
+                        </li>
+                        <li>
+                            <a href="#">Живородячі</a>
+                        </li>
+                        <li>
+                            <a href="#">Рептилії</a>
+                        </li>
+                        <li>
+                            <a href="#">Креветки</a>
+                        </li>
+                        <li>
+                            <a href="#">Золоті рибки</a>
+                        </li>
+                        <li>
+                            <a href="#">Черепахи</a>
+                        </li>
+                        <li>
+                            <a href="#">Чистильники</a>
+                        </li>
+                        <li>
+                            <a href="korm.html">Корм</a>
+                        </li>
+                    </ul>
+                    <article class="fish">
+                 <h3>Неон голубий - Parach. innesi</h3>
+<button type="button" title="Неон голубий - Parach. innesi" class="btn btn-primary" data-toggle="modal" data-target="#staticBackdrop">
+ <img src="image/neon-blue.jpg" alt="Бичок лицар" width="210" height="250">
+</button>
+
+<div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">Відео огляд</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+    <video  autoplay muted loop poster="video/fish.jpg" id="myVideo">
+<source src="video/3.mp4" type="video/mp4">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+  
+      </div>
+    </div>
+  </div>
+</div>                  
+                        <p> 
+       
+                           
+                            Розмір, см: 2-3 <br>
+                            Сумісність: мирні
+                          <br>Кількість: багато
+                        </p>
+   <div class="product-buttons">
+   <select id='number-select' class="buttons"></select>
+   <select id='price-select' class="buttons"></select>
+ <button id="button" class="buttonBuy">Купити</button>
+ </div>
+ </article>
+
+<article class="fish">
+                 <h3>Неон червоний - Parach. axelrodi</h3>
+<button type="button" title="Неон червоний - Parach. axelrodi" class="btn btn-primary" data-toggle="modal" data-target="#staticBackdrop">
+ <img src="image/neon-red.jpg" alt="Бичок лицар" width="210" height="250">
+</button>
+
+<div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">Відео огляд</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+    <video  autoplay muted loop poster="video/fish.jpg" id="myVideo">
+<source src="video/3.mp4" type="video/mp4">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+  
+      </div>
+    </div>
+  </div>
+</div>
+                          <p> 
+       
+                            
+                            Розмір, см: 2-3 <br>
+                            Сумісність: мирні
+                          <br>Кількість: багато
+                        </p>
+<div class="product-buttons">
+<select id='number-selects' class="buttons"></select>
+<select id='price-selects' class="buttons"></select>
+   <button id="button" class="buttonBuy">Купити</button>
+  </div>
+ </article>
+              
+   <article class="fish">
+                        <h3>Тернеція червона - Glo-fish</h3>
+<button type="button" title="Тернеція червона - Glo-fish" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal"> <img src="image/ternetion.jpg" alt="Тернеція червона" width="210" height="200"></button>
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Відео огляд</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+     <video  autoplay muted loop poster="video/fish.jpg" id="myVideo">
+<source src="video/ternetion.mp4" type="video/mp4">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+             </div>
+    </div>
+  </div>
+</div>        
+                       
+                        <br>
+                        <p>
+                            Латинь: Gymnocorymbus ternetzi GLOFISH<br>
+                            Розмір, см: 2-3 <br>
+                            Сумісність: мирні<br>Кількість: багато
+                        </p>
+ <div class="product-buttons">
+   <select id='number-select' class="buttons"></select>
+   <select id='price-select' class="buttons"></select>
+ <button id="button_a"  class="buttonBuy">Купити</button>
+ </div>
+                    </article>
+                
+                    <article class="fish">
+ <h3>Червона шапочка</h3>
+ <img src="image/red_riding_hood.jpg" alt="Червона шапочка" title="Червона шапочка" width="210" height="200">
+                        <p>
+                            Латинь: Tancho оranda<br>
+                            Розмір, см: 5-6 <br>
+                            Сумісність: мирні<br>Кількість: мало
+                        </p>
+                        <div class="product-buttons">
+                         <label>
+                            <input type="number" class="buttons" name="num" min="1" max="10" placeholder="1">
+                        </label>
+                            <button id="button_b"  class="buttonBuy">Купити</button>
+                            235.00 грн.
+
+                        </div>
+                    </article>
+                    <article class="fish">
+ <h3>Барбус суматранський</h3>
+<img src="image/sumatran_green_barb.jpg" alt="Барбус суматранський зелений" title="Барбус суматранський" width="210" height="200">
+<p>
+                            Латинь: Barbus tetrazona GLOFISH<br>
+                            Розмір, см: 2-3<br>
+                            Сумісність: мирні<br>Кількість: багато
+                        </p>
+                        <div class="product-buttons">
+                          <label>
+                            <input type="number" class="buttons" name="num" min="1" max="10" placeholder="1">
+                        </label>
+                            <button id="button_c" class="buttonBuy">Купити</button>
+                            23.00 грн.
+
+                        </div>
+                    </article>
+                    <article class="fish">
+  <h3>Вуалехвіст червоний</h3>
+<img src="image/red_voilevist.jpg" alt="Вуалехвіст червоний" title="Вуалехвіст червоний" width="210" height="200">
+  <p>
+                            Латинь: Carassius auratus<br>
+                            Розмір, см: 2-3<br>
+                            Сумісність: мирні<br>Кількість: багато
+</p>
+                        <div class="product-buttons">
+                        <label>
+                            <input type="number" class="buttons" name="num" min="1" max="10" placeholder="1">
+                        </label>
+                            <button  id="button_d" class="buttonBuy">Купити</button>
+                            53.00 грн.
+                        </div>
+                    </article>
+                    <article class="fish">
+ <h3>Аулонокара Строуберрі</h3>
+<img src="image/Aulonocara.jpg" alt="Аулонокара Строуберрі" title="Аулонокара Строуберрі" width="210" height="200">
+ <br>
+ <p>
+      Латинь: Aulonocara strawberry<br>
+                            Розмір, см: 5-6<br>
+                            Сумісність: агресивні<br>Кількість: мало
+                        </p>
+                        <div class="product-buttons">
+                        <label>
+                            <input type="number" class="buttons" name="num" min="1" max="10" placeholder="1">
+                        </label>
+                            <button id="button_e"  class="buttonBuy">Купити</button>
+                            123.00 грн.
+
+                        </div>
+                    </article>
+                    <article class="fish">
+                        <h3>Рак мандарин</h3>
+                        <img src="image/Cambarellus.jpg" alt="Рак мандарин" width="210" height="200">
+                        <br>
+                        <p>
+                            Латинь: Procambarus milleri<br>
+                            Розмір, см: 4-5<br>
+                            Сумісність: мирні <br>Кількість: мало
+                        </p>
+                        <div class="product-buttons">
+                       <label>
+                            <input type="number" class="buttons" name="num" min="1" max="10" placeholder="1">
+                        </label>
+                            <button  id="button_f" class="buttonBuy">Купити</button>
+                            45.00 грн.
+
+                        </div>
+                    </article>
+                </div>
+            </section>
+            <hr>
+        </main>
+        <footer>
+            <section id="contacts">
+                <h1>Контакти</h1>
+                <form action="https://formspree.io/sokeyush@gmail.com" method="POST">
+                  <p class="contact">
+                                Україна, Львів<br>
+                                +38 (098) 422-91-99<br>
+                                +38 (099) 049-95-45<br>
+                                 <a href=" "><img src="image/phone.png"  alt="phone" width="30" height="30"></a>
+                                Пн-Пт: з 9:00 до 18:00<br>
+                                Сб-Нд: вихідний<br>
+                                E-mail: info@fishstore.org.ua<br>
+                                ДОСТАВКА РИБ ПО ВСІЙ УКРАЇНІ<br>
+                  </p><p class="data">
+                                <label >
+                                    Ім'я: <input type="text" class="datas" name="name" placeholder="Введіть ваше ім'я">
+                                </label>
+                                <label>
+                                    Телефон:* <input type="tel" class="datas" name="phone" placeholder="Tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" maxlength="12" required>
+                                </label>
+                                <label>
+                                    Електронна пошта: <input type="email" class="datas"  name="user-name" placeholder="Email" multiple>
+                                </label>
+                                <label>
+                                    Повідомлення:* <input type="text" class="datas" name="text-area" placeholder="Введіть ваше повідомлення" size="35" required>
+                                </label>
+                                <label>
+                                    <input type="submit" class="button" value="Надіслати"> <a href=""><img src="image/message.png" alt="message" height="50" width="50"></a>
+                                </label>
+                  </p>
+                </form>
+            </section>
+            <p class="foot">
+            <a  href="#">
+                <img src="image/instagram.jpg" alt="instagram" width="30" height="30">
+            </a>
+            <a href="#">
+                <img src="image/facebook.png" alt="facebook" width="30" height="30">
+            </a>
+            </p>
+        </footer>
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+       <script src="js/index.js"></script>
+        
+    </body>
+</html>
