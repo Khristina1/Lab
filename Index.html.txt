@@ -36,7 +36,7 @@
             </nav>
             <div class="banner">
                 <h1>
-                    <a href="index.html">Welcome </a>
+                    <a href="index.html">Welcome to  </a>
                 </h1>
             </div>
         </header>
