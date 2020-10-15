@@ -1,9 +1,9 @@
 let fileURL = 'file.txt';
 
-wald();
-laplace();
-hurwitz(0.7);
-bayesLaplace([0.5, 0.35, 0.15]);
+waldCriteria();
+laplaceCriteria();
+hurwitzCriteria(0.7);
+bayeslaplaceCriteria([0.5, 0.35, 0.15]);
 
 async function getFile() {
     const res = await fetch(fileURL);
@@ -11,24 +11,24 @@ async function getFile() {
     return t;
 }
 
-async function wald() {
+async function waldCriteria() {
     let strategies = await getFile();
     strategies = strategies.split('\n');
     const min = [];
     strategies.forEach(el => {
         min.push(Math.min(...el.split(' ')));
     });
-    console.log('%c Wald criteria: ', 'background: #222; color: #bada55');
-    console.log(`Rows min values: ${min.join(' ')}`);
-    console.log(`Max lower value: ${Math.max(...min)}`);
+    console.log('%c Критерій Вальда: ', 'background: #000080; color: #ADD8E6');
+    console.log(`Рядки мінімальних значень: ${min.join(' ')}`);
+    console.log(`Максимальне нижнє значення: ${Math.max(...min)}`);
     strategies.forEach(el => {
         if (Math.min(...el.split(' ')) === Math.max(...min)) {
-            console.log(`The best strategy is ${el}`)
+            console.log(`Найкращий варіант ${el}`)
         }
     })
 }
 
-async function laplace() {
+async function laplaceCriteria() {
     let strategies = await getFile();
     strategies = strategies.split('\n');
     let newStrategies = [];
@@ -40,21 +40,21 @@ async function laplace() {
         sumRows.push(el.reduce((a, c) => a + c));
     });
 
-    console.log('%c Laplace criteria: ', 'background: #222; color: #bada55');
-    console.log(`Rows sum values: ${sumRows.join(' ')}`);
-    console.log(`Max value: ${Math.max(...sumRows)}`);
+    console.log('%c Оцінка Лапласа: ', 'background:#000080; color: #ADD8E6');
+    console.log(`Значення суми рядків: ${sumRows.join(' ')}`);
+    console.log(`Максимальне значення: ${Math.max(...sumRows)}`);
 
     strategies.forEach(el => {
         let newValues = el.split(' ').map((val) => val / strategies.length);
         let sum = newValues.reduce((a, c) => a + c);
         if (sum === Math.max(...sumRows)) {
-            console.log(`The best strategy is ${el}`);
+            console.log(`Найкращий варіант ${el}`);
         }
     });
 
 }
 
-async function hurwitz(coef) {
+async function hurwitzCriteria(coef) {
     let strategies = await getFile();
     strategies = strategies.split('\n');
     let max = [];
@@ -63,31 +63,31 @@ async function hurwitz(coef) {
         max.push(Math.max(...el.split(' ')));
         min.push(Math.min(...el.split(' ')));
     });
-    console.log('%c Hurwits criteria: ', 'background: #222; color: #bada55');
-    console.log(`Coeficient: ${coef}`);
-    console.log(`The lowest values of each row: ${min.join(' ')}`);
-    console.log(`The highest values of each row: ${max.join(' ')}`);
+    console.log('%c Критерій Гурвіца: ', 'background: #000080; color: #ADD8E6');
+    console.log(`Коефіцієнт: ${coef}`);
+    console.log(`Найнижчі значення кожного рядка: ${min.join(' ')}`);
+    console.log(`Найвищі значення кожного рядка: ${max.join(' ')}`);
     max = max.map(el => el * (1 - coef));
     min = min.map(el => el * coef);
     let values = [];
     for (let i = 0; i < strategies.length; i++) {
         values.push(max[i] + min[i]);
     }
-    console.log(`The values after calculating: ${values.join(' ')}`);
+    console.log(`Значення після обчислення: ${values.join(' ')}`);
     let maxOfValue = Math.max(...values);
     strategies.forEach(el => {
         let value = (Math.max(...el.split(' ')) * (1 - coef)) + (Math.min(...el.split(' ')) * coef);
         if (value === maxOfValue) {
-            console.log(`The best strategy is ${el}`);
+            console.log(`Найкращий варіант ${el}`);
         }
     });
 }
 
-async function bayesLaplace(probability) {
+async function bayeslaplaceCriteria(probability) {
     let strategies = await getFile();
     strategies = strategies.split('\n');
-    console.log('%c Bayes-Laplace criteria: ', 'background: #222; color: #bada55');
-    console.log('Formula: A11*k1 + A12*k2 + A13*k3');
+    console.log('%c Баєса-Лапласа критерій: ', 'background: #000080; color: #ADD8E6');
+    console.log('Формула: A11*k1 + A12*k2 + A13*k3');
     let values = [];
     strategies.forEach(el => {
         let arr = el.split(' ');
@@ -98,7 +98,7 @@ async function bayesLaplace(probability) {
         values.push(newVal);
     });
     values = values.map(el => el.reduce((a, c) => a + c));
-    console.log(`The values after calculating by formula: ${values.join(' ')}`);
+    console.log(`Значення після обчислення за формулою: ${values.join(' ')}`);
 
     strategies.forEach(el => {
         let newVal = [];
@@ -107,7 +107,7 @@ async function bayesLaplace(probability) {
         }
         let max = newVal.reduce((a, c) => a + c);
         if (max === Math.max(...values)) {
-            console.log(`The best strategy is ${el}`);
+            console.log(`Найкращий варіант ${el}`);
         }
     })
 }
